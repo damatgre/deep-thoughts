@@ -1,13 +1,11 @@
-//import the gql tagged template function
-const { gql } =require('apollo-server-express');
+// import the gql tagged template function
+const { gql } = require('apollo-server-express');
 
-//create our typeDefs
+// create our typeDefs
 const typeDefs = gql`
-type Query {
+  type Query {
     helloWorld: String
-}
+  }
 `;
-
-//export the typeDefs
+// export the typeDefs
 module.exports = typeDefs;
-
