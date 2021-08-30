@@ -16,10 +16,10 @@ const server = new ApolloServer({
 
 // integrate our Apollo server with the Express application as middleware
 async function startServer() {
-  await server.start
+  await server.start()
   server.applyMiddleware({ app });
 }
-startServer()
+startServer();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -31,3 +31,4 @@ db.once('open', () => {
     console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
+
